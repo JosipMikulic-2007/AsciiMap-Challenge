@@ -40,6 +40,7 @@
                 e.preventDefault();
 
                 var formData = new FormData(this);
+                $('.validation-error').text('');
 
                 $.ajax({
                     type: "POST",

@@ -11,8 +11,14 @@
 
 <h2>Ascii Map Form</h2>
 
+<ol>
+    <li>Choose .txt file with ascii map</li>
+    <li>Click on "Submit" button</li>
+    <li>Wait for result</li>
+</ol>
+
 <form id="ascii-form">
-    <label for="AsciiMap">Txt datoteka: </label>
+    <label for="AsciiMap">Txt file: </label>
     <input type="file" name="AsciiMap" id="txtFile" />
     <br />
     <br />
@@ -22,6 +28,7 @@
 <span class="validation-error"></span>
 
 <div class="processing-result">
+    <h2>Results</h2>
     <h3>Letters: <span id="letters"></span></h3>
     <h3>Path as characters: <span id="path"></span></h3>
 </div>

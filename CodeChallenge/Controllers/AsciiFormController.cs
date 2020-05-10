@@ -15,7 +15,7 @@ namespace CodeChallenge.Controllers
         {
             if (formData.AsciiMap == null || !ModelState.IsValid)
             {
-                return Json(new { ErrorMessage = "Ascii map txt file is required" }, @"application/json");
+                return Json(new { ErrorMessage = "Txt file with ASCII map is required" }, @"application/json");
             }
 
             var result = AsciiMapService.ProcessUploadedFile(formData.AsciiMap);
