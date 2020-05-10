@@ -1,0 +1,27 @@
+﻿@model CodeChallenge.Models.AsciiForm
+@{
+    ViewBag.Title = "Ascii Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .processing-result {
+        display: none;
+    }
+</style>
+
+<h2>Ascii Map Form</h2>
+
+<form id="ascii-form">
+    <label for="AsciiMap">Txt datoteka: </label>
+    <input type="file" name="AsciiMap" id="txtFile" />
+    <br />
+    <br />
+    <input type="submit" id="submitMap" value="Submit" />
+</form>
+
+<span class="validation-error"></span>
+
+<div class="processing-result">
+    <h3>Letters: <span id="letters"></span></h3>
+    <h3>Path as characters: <span id="path"></span></h3>
+</div>
