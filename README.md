@@ -13,6 +13,6 @@
 
 ## Web Application instructions
 1. Click on "Choose File" button
-2. Select (.txt) file with ASCII map from your computer
+2. Select (.txt) file with an ASCII map from your computer
 3. Click on "Submit" button
-4. Result will show bellow the "Submit" button
+4. The result will show bellow the "Submit" button
