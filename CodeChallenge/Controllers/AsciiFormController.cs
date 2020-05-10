@@ -13,7 +13,7 @@ namespace CodeChallenge.Controllers
 
         public ActionResult AsciiMapPath(AsciiForm formData)
         {
-            if (!ModelState.IsValid)
+            if (formData.AsciiMap == null || !ModelState.IsValid)
             {
                 return Json(new { ErrorMessage = "Ascii map txt file is required" }, @"application/json");
             }

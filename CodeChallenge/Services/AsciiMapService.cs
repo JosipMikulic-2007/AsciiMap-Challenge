@@ -28,13 +28,13 @@ namespace CodeChallenge.Services
             return Encoding.UTF8.GetString(binData);
         }
 
-        private static char[][] GetLinesArrrayFromString(string content)
+        public static char[][] GetLinesArrrayFromString(string content)
         {
             string[] lines = content.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
             return lines.Select(item => item.ToArray()).ToArray();
         }
 
-        private static MapResult ResolveMap(char[][] charsArray)
+        public static MapResult ResolveMap(char[][] charsArray)
         {
             CharLocation currLoc;
             CharLocation prevLoc;
@@ -77,7 +77,7 @@ namespace CodeChallenge.Services
                 }
             }
 
-            return new MapResult { Letters =letters.ToString(), PathChars = path.ToString() };
-        }        
+            return new MapResult { Letters = letters.ToString(), PathChars = path.ToString() };
+        }
     }
 }

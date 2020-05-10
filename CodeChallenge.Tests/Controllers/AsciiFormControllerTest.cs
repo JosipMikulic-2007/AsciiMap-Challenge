@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CodeChallenge;
 using CodeChallenge.Controllers;
+using CodeChallenge.Models;
 
 namespace CodeChallenge.Tests.Controllers
 {
@@ -15,14 +16,23 @@ namespace CodeChallenge.Tests.Controllers
         [TestMethod]
         public void Index()
         {
-            // Arrange
             AsciiFormController controller = new AsciiFormController();
 
-            // Act
             ViewResult result = controller.Index() as ViewResult;
 
-            // Assert
             Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void AsciiMapPath()
+        {
+            AsciiFormController controller = new AsciiFormController();
+            AsciiForm formData = new AsciiForm() { AsciiMap = null};
+
+            var result = controller.AsciiMapPath(formData);
+
+            Assert.IsInstanceOfType(result, typeof (ActionResult));
+
         }
     }
 }
